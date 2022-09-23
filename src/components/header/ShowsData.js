@@ -4,13 +4,9 @@ import "./Card.css";
 const ShowsData = () => {
   const [search, setSearch] = useState("");
   const [data, setData] = useState([]);
+
   useEffect(() => {
     Func1();
-
-    // fetch(API)
-    //   .then((response) => response.json())
-    //   .then((res) => setData(res))
-    //   .catch((err) => console.log(err.message));
   }, [search]);
 
   const Func1 = async () => {
