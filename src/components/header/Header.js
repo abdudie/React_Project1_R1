@@ -15,10 +15,6 @@ const arr = [
 ];
 
 const Header = ({ setSearch, search, rV, setRV }) => {
-  const onChangeHandler = (e) => {
-    setSearch(e.target.value);
-  };
-
   const onClickHandler = (e) => {
     setRV(e.target.value);
   };
@@ -28,13 +24,6 @@ const Header = ({ setSearch, search, rV, setRV }) => {
       <span className="header">TVmaze</span>
       <div className="searchbox">
         <form>
-          <input
-            className="searchBox"
-            label="Search"
-            placeholder="Search Movies"
-            value={search}
-            onChange={onChangeHandler}
-          />
           <br />
           {arr.map((e) => {
             return (

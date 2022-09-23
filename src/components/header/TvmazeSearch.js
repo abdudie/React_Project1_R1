@@ -1,17 +1,14 @@
 import React from "react";
-import Card from "./Card";
+import ActorData from "./ActorData";
+import ShowsData from "./ShowsData";
+
 import "./TvmazeSearch.css";
 
-const TvmazeSearch = ({ search, setSearch, data, rV, setrV }) => {
+const TvmazeSearch = ({ search, setSearch, rV, setrV }) => {
   return (
     <div className="main">
-      {console.log(data)}
-      {data.map((e) => {
-        {
-          console.log(e);
-        }
-        return <Card rV={rV} data={e} />;
-      })}
+      {rV === "people" ? <ActorData /> : ""}
+      {rV === "shows" ? <ShowsData /> : ""}
     </div>
   );
 };

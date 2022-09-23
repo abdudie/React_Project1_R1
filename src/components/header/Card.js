@@ -2,21 +2,31 @@ import React from "react";
 import "./Card.css";
 import img from "../../Assets/img1.jpg";
 
+// condition ? solution1 : solution2
+
 let Card = (props) => {
   return (
     <>
       <div className="card-frame">
         <div className="image-container">
-          {props.rV == "shows" ? (
+          {props.rV === "shows" ? (
             props.data.show.image != null ? (
-              <img className="image" src={props.data.show.image.medium}></img>
+              <img
+                className="image"
+                alt={props.e}
+                src={props.data.show.image.medium}
+              ></img>
             ) : (
-              <img className="image" src={img}></img>
+              <img className="image" alt={props.e} src={img}></img>
             )
           ) : props.data.person.image != null ? (
-            <img className="image" src={props.data.person.image.medium}></img>
+            <img
+              className="image"
+              alt={props.e}
+              src={props.data.person.image.medium}
+            ></img>
           ) : (
-            <img className="image" src={img}></img>
+            <img className="image" alt={props.e} src={img}></img>
           )}
         </div>
         <div className="top-details">
