@@ -18,7 +18,7 @@ const Header = ({ setSearch, search, rV, setRV }) => {
   const onClickHandler = (e) => {
     setRV(e.target.value);
   };
-
+  console.log(rV);
   return (
     <>
       <span className="header">TVmaze</span>

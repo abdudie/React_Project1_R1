@@ -9,7 +9,7 @@ const ActorData = () => {
   useEffect(() => {
     Func1();
   }, [search]);
-
+  console.log(search);
   const Func1 = async () => {
     let API = `https://api.tvmaze.com/search/people?q=${search}`;
     try {

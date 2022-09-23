@@ -5,7 +5,7 @@ import TvmazeSearch from "./components/header/TvmazeSearch";
 
 function App() {
   const [rV, setRV] = useState("");
-
+  console.log(rV);
   return (
     <div className="App">
       <Header setRV={setRV} rV={rV} />
